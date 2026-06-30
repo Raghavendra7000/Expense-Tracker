@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <button class="menu">☰ Menu</button>
+
+      <div class="nav-right">
+        <span class="notification">🔔</span>
+
+        <button class="profile">👤 User ▼</button>
+      </div>
+    </nav>
+
+    <!-- Profile Menu -->
+
+    <div class="rightbar inactive">
+      <h3>👤 My Profile</h3>
+      <h3>✏️ Update Profile</h3>
+      <h3>👥 Manage Profiles</h3>
+      <h3 class="logout">🚪 Logout</h3>
+    </div>
+
+    <div class="main">
+      <!-- Sidebar -->
+
+      <div class="sidebar inactive">
+        <h3>🏠 Dashboard</h3>
+
+        <h3 class="recent">💳 Transactions</h3>
+
+        <h3 class="transact">➕ Add Transaction</h3>
+
+        <h3>📂 Categories</h3>
+
+        <h3>📊 Reports</h3>
+      </div>
+
+      <!-- Main Content -->
+
+      <div class="content">
+        <h1>Dashboard</h1>
+
+        <!-- Dashboard Cards -->
+
+        <div class="dash">
+          <section>
+            <h3>Total Income</h3>
+            <h2 class="income">₹0</h2>
+          </section>
+
+          <section>
+            <h3>Total Expense</h3>
+            <h2 class="expense">₹0</h2>
+          </section>
+
+          <section>
+            <h3>Balance</h3>
+            <h2 class="balance">₹0</h2>
+          </section>
+
+          <section>
+            <h3>This Month</h3>
+            <h2 class="month">₹0</h2>
+          </section>
+        </div>
+
+        <!-- Recent Transactions -->
+
+        <div class="overview">
+          <h2>Recent Transactions</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="Transaction-add-tab"></tbody>
+          </table>
+        </div>
+
+        <!-- Add Transaction Popup -->
+
+        <div class="add-container inactive">
+          <h2>Add Transaction</h2>
+
+          <section class="transaction-form">
+            <label for="name"> Transaction Name </label>
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Ex: Salary, Petrol, Food"
+            />
+
+            <label for="amount"> Amount </label>
+
+            <input type="number" id="amount" placeholder="Enter Amount" />
+
+            <label for="category"> Category </label>
+
+            <select id="category">
+              <option value="">-- Select Category --</option>
+
+              <option value="Salary">💸 Salary</option>
+
+              <option value="Food">🍔 Food</option>
+
+              <option value="Grocery">🛒 Grocery</option>
+
+              <option value="Transportation">🚌 Transportation</option>
+
+              <option value="Fuel">⛽ Fuel</option>
+
+              <option value="Water Bill">💧 Water Bill</option>
+
+              <option value="Healthcare">🏥 Healthcare</option>
+
+              <option value="Entertainment">🎬 Entertainment</option>
+
+              <option value="Other">📦 Other</option>
+            </select>
+
+            <label> Transaction Type </label>
+
+            <div class="radio-group">
+              <input type="radio" id="income" name="type" value="Income" />
+
+              <label for="income"> Income </label>
+
+              <input type="radio" id="expense" name="type" value="Expense" />
+
+              <label for="expense"> Expense </label>
+            </div>
+
+            <label for="date"> Date </label>
+
+            <input type="date" id="date" />
+
+            <button type="button" id="addBtn" class="addBtn">
+              ➕ Add Transaction
+            </button>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="add.js"></script>
+  </body>
+</html>
