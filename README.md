@@ -1,5 +1,7 @@
 # 💰 Expense Tracker
+## 🌐 Live Demo
 
+🔗 https://raghavendra7000.github.io/Expense-Tracker/
 A responsive Expense Tracker web application built using HTML, CSS, and JavaScript.
 
 ## 🚀 Features
